@@ -1,4 +1,4 @@
 1. Install dependencies
 2. create package.json using 'npm init -y' -- do 'npx gitignore node' if you need too
-3. create index.js and server and set up server and routes files
-4. 
+3. create index.js and api folder with server.js inside somewhere 
+4. create data folder input data needed for now
