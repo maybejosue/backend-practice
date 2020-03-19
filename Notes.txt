@@ -1,4 +1,5 @@
-1. Install dependencies
-2. create package.json using 'npm init -y' -- do 'npx gitignore node' if you need too
-3. create index.js and api folder with server.js inside somewhere 
-4. create data folder input data needed for now
+1. Install dependencies - nodemon as -D, express, knex, sqlite3, and helmet.
+2. create package.json using 'npm init -y' -- do 'npx gitignore node' if you need too.
+3. create index.js and api folder with server.js inside somewhere .
+4. create data folder input data needed for now.
+5. set up index.js and server.js if you havent already.
