@@ -2,8 +2,8 @@ const express = require("express");
 const helmet = require("helmet");
 const cors = require("cors");
 
-// bring in router
-const characterRouter = require("../data/characterRouter.js");
+// // bring in router
+// const characterRouter = require("../data/characterRouter.js");
 
 const server = express();
 
@@ -14,5 +14,7 @@ server.use(express.json());
 server.get("/", (req, res) => {
   res.send("<p>Running Server</p>");
 });
+
+// server.use("/api/router", characterRouter);
 
 module.exports = server;
