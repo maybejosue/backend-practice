@@ -22,3 +22,24 @@ development: {
   };
 
   9.create your db design and set them up using knex migrate:make <NAME>
+  10. dont forget to input 'pool' category in knexfile if you are using foreign keys
+  Ex:
+  development: {
+    client: 'sqlite3',
+    useNullAsDefault: true,
+    connection: {
+      filename: './data/characters.db3'
+    },
+    migrations: {
+      directory: './data/migrations'
+    },
+    seeds: {
+      directory: './data/seeds'
+    },
+    pool: {
+      afterCreate: (conn, done) => {
+        // runs after a connection is made to the sqlite engine
+        conn.run('PRAGMA foreign_keys = ON', done); // turn on FK enforcement
+      },
+    },
+  },
