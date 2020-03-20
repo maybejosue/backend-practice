@@ -3,3 +3,22 @@
 3. create index.js and api folder with server.js inside somewhere .
 4. create data folder input data needed for now.
 5. set up index.js and server.js if you havent already.
+6. after, go to the termminal and create knexfile using knex init
+7. go to knexfile and change filename to connect to your database like ./data/WHATEEVERYOUCALLIT.db3
+8. in the development branch link to your migration and useNullAsDefault it should look like this:
+Ex:
+development: {
+    client: "sqlite3",
+    connection: {
+      filename: "./data/character.db3"
+    },
+    migrations: {                     ---- if you make migration / table data
+      directory: "./data/migrations"
+    },
+    seeds: {                           ---- if you make seeds / fake data
+      directory: "./data/seeds"
+    },
+    useNullAsDefault: true
+  };
+
+  9.create your db design and set them up using knex migrate:make <NAME>
